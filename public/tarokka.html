@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tarokka Card Reading</title>
+        <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/public/javascripts/readCards-clientside.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Curse of Strahd</h1>
+            <h2>Tarrokka Card Reading</h2>
+        </div>
+        <div class= "content">
+            <div id="introImage" class="image">
+                    <img src="/public/images/uTarokka_cardspread.png" alt="Tarokka Deck">
+            </div>
+            <div class="button" id="cardButton">
+                <form>
+                    <button name="startReading" onclick="readCards()">Begin Card Reading</button>
+                </form>
+            </div>
+            <div class="button" id="resetButton">
+                <button name="reset" onclick="reset()">Reset Card Reading</button>
+            </div>
+            <div class = "image" id="cardDisplay">
+            </div>
+            <div id="cardDescriptions">
+                <div id="1">
+                    <div id="textA">
+                    </div>
+                </div>
+                <div id="2">
+                    <div class="reading" id="textB">
+                    </div>
+                </div>
+                <div id="3">
+                    <div class="reading" id="textC">
+                    </div>
+                </div>
+                <div id="4">
+                    <div class="reading" id="textD">
+                    </div>
+                </div>
+                <div id="5">
+                    <div class="reading" id="textE">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>
