@@ -7,7 +7,11 @@ body {
 #resetButton, #cardDisplay, #cardDescriptions, {
   display: none;
 }
+div.header{
+  display:inline-block;
+  text-align:center;
 
+}
 
 a {
   color: #00B7FF;
