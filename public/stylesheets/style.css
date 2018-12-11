@@ -3,6 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+#resetButton, #cardDisplay, #cardDescriptions, {
+  display: none;
+}
+
 a {
   color: #00B7FF;
 }
@@ -26,7 +30,4 @@ button {
 a:link, a:visited, a:hover, a:active,{
   color:white;
   text-decoration: none;
-}
-#resetButton, #cardDisplay, #cardDescriptions, {
-  display: none;
 }

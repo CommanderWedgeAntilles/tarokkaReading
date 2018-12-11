@@ -118,6 +118,11 @@ function hideContent(){
 }
 
 function displayCards(){
+    $("#tome").append("");
+    $("#symbol").append("");
+    $("#sword").append("");
+    $("#enemy").append("");
+    $("#location").append("");
 
 }
 
