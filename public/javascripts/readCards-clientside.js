@@ -191,7 +191,7 @@ function reveal(){
 
 }
 
-function reset(){
+function resetPage(){
     document.getElementById("cardButton").style.visibility="visible";
     document.getElementById("introImage").style.visibility="visible";
     //$("#cardButton").css("display","block");
