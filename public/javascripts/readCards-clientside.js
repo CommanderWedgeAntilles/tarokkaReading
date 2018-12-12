@@ -57,9 +57,6 @@ function filenameFix(int){
 
 //no cards drawn are the same
 function noSameLow(a,b,c){
-    a = randomize(40);
-    b = randomize(40);
-    c = randomize(40);
     //this may be a problem
     if (a != b && c){
         if (b != c){
@@ -92,9 +89,9 @@ function drawLowCards(){
     
     var plotPoint = $("#plotPoint").val();
     var cardName = $("#cardName").val();
-    idA = 0;
-    idB = 0;
-    idC = 0;
+    a = randomize(40);
+    b = randomize(40);
+    c = randomize(40);
     //this may be a problem
     idA,idB,idC = noSameLow(idA,idB,idC);
     console.log(idA,idB,idC);
