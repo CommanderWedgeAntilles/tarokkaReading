@@ -178,9 +178,9 @@ function displayLowCards(a,b,c){
 
 function displayHighCards(a,b){
     filename = filenameFix(a);
-    $("#enemy").append("<img src='./images/", filename, ".png'>");
+    $("#enemy").append("<img src='./images/" + filename + ".png'>");
     filename = filenameFix(b);
-    $("#location").append("<img src='./images/", filename, ".png'>");
+    $("#location").append("<img src='./images/" + filename + ".png'>");
 }
 
 function reveal(){
