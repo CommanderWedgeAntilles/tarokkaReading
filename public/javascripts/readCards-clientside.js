@@ -61,7 +61,7 @@ function noSameLow(a,b,c){
     b = randomize(40);
     c = randomize(40);
     //this may be a problem
-    if (a != b||c){
+    if (a != b && c){
         if (b != c){
             return a,b,c;
         }
