@@ -193,7 +193,7 @@ function reveal(){
 
 function reset(){
     document.getElementById("cardButton").style.display="block";
-    document.getElementById("introImage").display="block";
+    document.getElementById("introImage").style.display="block";
     
     document.getElementById("resetButton").style.display="none";
     document.getElementById("cardDisplay").style.display="none";
