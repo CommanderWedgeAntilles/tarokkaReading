@@ -4,8 +4,8 @@ body {
   background-color: #efe5d5;
 }
 
-#resetButton, #cardDisplay, #cardDescriptions, {
-  display: block;
+#resetButton, #cardDisplay, #cardDescriptions {
+  display: none;
 }
 
 #introImage{

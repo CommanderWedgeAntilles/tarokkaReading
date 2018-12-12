@@ -184,7 +184,7 @@ function displayHighCards(a,b){
 }
 
 function reveal(){
-    document.getElementById("resetButton").style.visibility="visible";
+    document.getElementById("resetButton").style.display="block";
     document.getElementById("cardDisplay").style.visibility="visible";
     document.getElementById("cardDescriptions").style.visibility="visible";
 
@@ -193,10 +193,12 @@ function reveal(){
 function reset(){
     document.getElementById("cardButton").style.visibility="visible";
     document.getElementById("introImage").style.visibility="visible";
+    //$("#cardButton").css("display","block");
     
     document.getElementById("resetButton").style.visibility="hidden";
     document.getElementById("cardDisplay").style.visibility="hidden";
     document.getElementById("cardDescriptions").style.visibility="hidden";
+    //.empty()
 
 }
 function readCards(){
