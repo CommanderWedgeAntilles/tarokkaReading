@@ -7,6 +7,12 @@ body {
 #resetButton, #cardDisplay, #cardDescriptions, {
   display: none;
 }
+#introImage{
+  width:100%;
+  padding:16pt;
+  display: block;
+  align-content: center;
+}
 div.header{
   display:inline-block;
   text-align:center;
