@@ -10,6 +10,9 @@ body {
 div.header{
   display:inline-block;
   text-align:center;
+  padding: 16pt;
+  width: 100%;
+
 
 }
 
