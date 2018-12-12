@@ -184,7 +184,8 @@ function displayHighCards(a,b){
 }
 
 function reveal(){
-    document.getElementById("resetButton").style.display="block";
+    //document.getElementById("resetButton").style.display="block";
+    $("#resetButton").css("display","block");
     document.getElementById("cardDisplay").style.visibility="visible";
     document.getElementById("cardDescriptions").style.visibility="visible";
 
