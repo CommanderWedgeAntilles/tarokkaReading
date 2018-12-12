@@ -171,9 +171,9 @@ function hideContent(){
 
 function displayLowCards(a,b,c){
 
-    $("#tome").append("<img src='./images/", a, ".png'>");
-    $("#symbol").append("<img src='./images/", b, ".png'>");
-    $("#sword").append("<img src='./images/", c, ".png'>");
+    $("#tome").append("<img src='./images/" + a + ".png'>");
+    $("#symbol").append("<img src='./images/" + b + ".png'>");
+    $("#sword").append("<img src='./images/" + c + ".png'>");
 }
 
 function displayHighCards(a,b){
