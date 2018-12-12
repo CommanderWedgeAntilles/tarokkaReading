@@ -56,47 +56,50 @@ function filenameFix(int){
 }
 
 //no cards drawn are the same
-function noSameLow(a,b,c){
+function noSameLow(){
     //this may be a problem
-    if (a != b && c){
+    var a = randomize(40);
+    var b = randomize(40);
+    var c = randomize(40);
+    thisArray = [a,b,c];
+    if ((a != b) && (a != c)){
         if (b != c){
-            return a,b,c;
+            return thisArray;
         }
         else{
-            noSameLow(a,b,c);
+            noSameLow();
         }
     }
     else{
-        noSameLow(a,b,c);
+        noSameLow();
     }
 }
 
 //no cards drawn are the same
-function noSameHigh(a,b){
-    a = randomize(14);
-    b = randomize(14);
+function noSameHigh(){
+    var a = randomize(14);
+    var b = randomize(14);
+    var thisArray = [a,b];
 
     if(a != b){
-        return a,b;
+        return thisArray;
     }
     else{
-        noSameHigh(a,b);
+        noSameHigh();
     }
 }
 
 function drawLowCards(){
     console.log("Drawing from Low Deck...");
     
-    var plotPoint = $("#plotPoint").val();
-    var cardName = $("#cardName").val();
-    a = randomize(40);
-    b = randomize(40);
-    c = randomize(40);
+    //var plotPoint = $("#plotPoint").val();
+    //var cardName = $("#cardName").val();
+    var idArray;
     //this may be a problem
-    idA,idB,idC = noSameLow(idA,idB,idC);
-    console.log(idA,idB,idC);
+    idArray = noSameLow();
+    console.log(idArray);
 
-    $.get("/getLowCardA",{id:idA}, function(data){
+    $.get("/getLowCardA",{id:idArray[0]}, function(data){
         for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
 
@@ -108,7 +111,7 @@ function drawLowCards(){
         }
     });
 
-    $.get("/getLowCardB",{id:idB},function(data){
+    $.get("/getLowCardB",{id:idArray[1]},function(data){
         for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#2").append("<h3 class='plotPoint'>" + card.plotPoint + "</h3>");
@@ -119,7 +122,7 @@ function drawLowCards(){
         }
     });
 
-    $.get("/getLowCardC",{id:idC}, function(data){
+    $.get("/getLowCardC",{id:idArray[2]}, function(data){
         for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#3").append("<h3 class='plotPoint'>" + card.plotPoint + "</h3>");
@@ -129,17 +132,16 @@ function drawLowCards(){
 
         }
     });
-    displayLowCards(idA,idB,idC);
+    displayLowCards(idArray[0],idArray[1],idArray[2]);
 }
 
 function drawHighCard(){
     console.log("Drawing from High Deck...");
-    idA = 0;
-    idB = 0;
-    idA,idB = noSameHigh(idA,idB);
-    console.log(idA,idB);
+    var idArray;
+    idArray = noSameHigh();
+    console.log(idArray);
 
-    $.get("/getHighCardA", {id:idA}, function(data){
+    $.get("/getHighCardA", {id:idArray[0]}, function(data){
         for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#4").append("<h3 class='plotPoint'>" + card.plotPoint + "</h3>");
@@ -150,7 +152,7 @@ function drawHighCard(){
 
     });
 
-    $.get("/getHighCardB", {id:idB}, function(data){
+    $.get("/getHighCardB", {id:idArray[1]}, function(data){
         for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#5").append("<h3 class='plotPoint'>" + card.plotPoint + "</h3>");
@@ -159,7 +161,7 @@ function drawHighCard(){
             $("#textE").append("<p class='cardReading'>" + card.cardReading + "</p>");
         }
     });
-    displayHighCards(idA,idB);
+    displayHighCards(idArray[0],idArray[1]);
 
 }
 function hideContent(){
