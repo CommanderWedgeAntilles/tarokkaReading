@@ -5,7 +5,7 @@ body {
 }
 
 #resetButton, #cardDisplay, #cardDescriptions, {
-  display: none;
+  display: block;
 }
 
 #introImage{

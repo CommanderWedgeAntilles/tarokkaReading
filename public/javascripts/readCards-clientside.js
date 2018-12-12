@@ -163,8 +163,8 @@ function drawHighCard(){
 
 }
 function hideContent(){
-    document.getElementById("cardButton").style.display="none";
-    document.getElementById("introImage").style.display="none";
+    document.getElementById("cardButton").style.visibility="hidden";
+    document.getElementById("introImage").style.visibility="hidden";
 }
 
 function displayLowCards(a,b,c){
@@ -182,19 +182,19 @@ function displayHighCards(a,b){
 }
 
 function reveal(){
-    document.getElementById("resetButton").style.display="block";
-    document.getElementById("cardDisplay").style.display="block";
-    document.getElementById("cardDescriptions").style.display="block";
+    document.getElementById("resetButton").style.visibility="visible";
+    document.getElementById("cardDisplay").style.visibility="visible";
+    document.getElementById("cardDescriptions").style.visibility="visible";
 
 }
 
 function reset(){
-    document.getElementById("cardButton").style.display="block";
-    document.getElementById("introImage").style.display="block";
+    document.getElementById("cardButton").style.visibility="visible";
+    document.getElementById("introImage").style.visibility="visible";
     
-    document.getElementById("resetButton").style.display="none";
-    document.getElementById("cardDisplay").style.display="none";
-    document.getElementById("cardDescriptions").style.display="none";
+    document.getElementById("resetButton").style.visibility="hidden";
+    document.getElementById("cardDisplay").style.visibility="hidden";
+    document.getElementById("cardDescriptions").style.visibility="hidden";
 
 }
 function readCards(){
