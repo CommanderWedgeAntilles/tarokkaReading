@@ -165,8 +165,8 @@ function drawHighCard(){
 
 }
 function hideContent(){
-    document.getElementById("cardButton").style.visibility="hidden";
-    document.getElementById("introImage").style.visibility="hidden";
+    $("#cardButton").css("display","none");
+    $("#introImage").css("display","none");
 }
 
 function displayLowCards(a,b,c){
@@ -186,19 +186,18 @@ function displayHighCards(a,b){
 function reveal(){
     //document.getElementById("resetButton").style.display="block";
     $("#resetButton").css("display","block");
-    document.getElementById("cardDisplay").style.visibility="visible";
-    document.getElementById("cardDescriptions").style.visibility="visible";
+    $("#cardDisplay").css("display","block");
+    $("#cardDescriptions").css("display","block");
 
 }
 
 function resetPage(){
-    document.getElementById("cardButton").style.visibility="visible";
-    document.getElementById("introImage").style.visibility="visible";
-    //$("#cardButton").css("display","block");
+    $("#cardButton").css("display","block");
+    $("#introImage").css("display","block");
     
-    document.getElementById("resetButton").style.visibility="hidden";
-    document.getElementById("cardDisplay").style.visibility="hidden";
-    document.getElementById("cardDescriptions").style.visibility="hidden";
+    $("#resetButton").css("display","none");
+    $("#cardDisplay").css("display","none");
+    $("#cardDescriptions").css("display","none");
     //.empty()
 
 }
