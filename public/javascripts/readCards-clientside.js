@@ -163,8 +163,8 @@ function drawHighCard(){
 
 }
 function hideContent(){
-    document.getElementById("cardButton").display="none";
-    document.getElementById("introImage").display="none";
+    document.getElementById("cardButton").style.display="none";
+    document.getElementById("introImage").style.display="none";
 }
 
 function displayLowCards(a,b,c){

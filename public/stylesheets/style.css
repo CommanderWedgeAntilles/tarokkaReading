@@ -7,6 +7,7 @@ body {
 #resetButton, #cardDisplay, #cardDescriptions, {
   display: none;
 }
+
 #introImage{
   width:100%;
   padding:16pt;
