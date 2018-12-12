@@ -1,8 +1,9 @@
+
 const express = require('express');
 const path = require("path");
 const jquery = require('jquery');
 const drawCardController = require("./controllers/drawCardController.js");
-
+require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
 

@@ -3,6 +3,57 @@ function randomize(range){
     var result = (Math.floor(Math.random() * range) + 1);
     return result;
 }
+function filenameFix(int){
+    var filename;
+    switch(int){
+        case 1:
+            filename = "Artifact";
+            break;
+        case 2:
+            filename = "Beast";
+            break;
+        case 3:
+            filename = "Broken-One";
+            break;
+        case 4:
+            filename = "Darklord";
+            break;
+        case 5:
+            filename = "DonJon";
+            break;
+        case 6:
+            filename = "Executioner";
+            break;
+        case 7:
+            filename = "Ghost";
+            break;
+        case 8:
+            filename = "Horseman";
+            break;
+        case 9:
+            filename = "Innocent";
+            break;
+        case 10:
+            filename = "Marionette";
+            break;
+        case 11:
+            filename = "Mist";
+            break;
+        case 12:
+            filename = "Raven";
+            break;
+        case 13:
+            filename = "Seer";
+            break;
+        case 14:
+            filename = "Tempter";
+            break;
+        default:
+            console.log("Error: Input number wrong.");
+            break;
+    }
+    return filename;
+}
 
 //no cards drawn are the same
 function noSameLow(a,b,c){
@@ -81,6 +132,7 @@ function drawLowCards(){
 
         }
     });
+    displayLowCards(idA,idB,idC);
 }
 
 function drawHighCard(){
@@ -110,6 +162,7 @@ function drawHighCard(){
             $("#textE").append("<p class='cardReading'>" + card.cardReading + "</p>");
         }
     });
+    displayHighCards(idA,idB);
 
 }
 function hideContent(){
@@ -117,36 +170,40 @@ function hideContent(){
     document.getElementById("introImage").display="none";
 }
 
-function displayCards(){
-    $("#tome").append("");
-    $("#symbol").append("");
-    $("#sword").append("");
-    $("#enemy").append("");
-    $("#location").append("");
+function displayLowCards(a,b,c){
 
+    $("#tome").append("<img src='", + a, + ".png'>");
+    $("#symbol").append("<img src='", + b, + ".png'>");
+    $("#sword").append("<img src='", + c, + ".png'>");
+}
+
+function displayHighCards(a,b){
+    filename = filenameFix(a);
+    $("#enemy").append("<img src='", + filename, + ".png'>");
+    filename = filenameFix(b);
+    $("#location").append("<img src='", + filename, + ".png'>");
 }
 
 function reveal(){
-    document.getElementById("resetButton").display="block";
-    document.getElementById("cardDisplay").display="block";
-    document.getElementById("cardDescriptions").display="block";
+    document.getElementById("resetButton").style.display="block";
+    document.getElementById("cardDisplay").style.display="block";
+    document.getElementById("cardDescriptions").style.display="block";
 
 }
 
 function reset(){
-    document.getElementById("cardButton").display="block";
+    document.getElementById("cardButton").style.display="block";
     document.getElementById("introImage").display="block";
     
-    document.getElementById("resetButton").display="none";
-    document.getElementById("cardDisplay").display="none";
-    document.getElementById("cardDescriptions").display="none";
+    document.getElementById("resetButton").style.display="none";
+    document.getElementById("cardDisplay").style.display="none";
+    document.getElementById("cardDescriptions").style.display="none";
 
 }
 function readCards(){
     hideContent();
     drawLowCards();
     drawHighCard();
-    displayCards();
     reveal();
 }
 
