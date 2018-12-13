@@ -52,3 +52,9 @@ a:link, a:visited, a:hover, a:active,{
   color:white;
   text-decoration: none;
 }
+
+img.cardImg{
+  padding: 14px;
+  height: auto;
+  width: 20%;
+}

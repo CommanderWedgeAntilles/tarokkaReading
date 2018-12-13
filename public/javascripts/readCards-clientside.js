@@ -163,6 +163,7 @@ function drawHighCard(){
     displayHighCards(idArray[0],idArray[1]);
 
 }
+
 function hideContent(){
     $("#cardButton").css("display","none");
     $("#introImage").css("display","none");
@@ -170,16 +171,16 @@ function hideContent(){
 
 function displayLowCards(a,b,c){
 
-    $("#tome").append("<img src='./images/" + a + ".png'>");
-    $("#symbol").append("<img src='./images/" + b + ".png'>");
-    $("#sword").append("<img src='./images/" + c + ".png'>");
+    $("#tome").append("<img src='./images/" + a + ".png' class='cardImg'>");
+    $("#symbol").append("<img src='./images/" + b + ".png' class='cardImg'>");
+    $("#sword").append("<img src='./images/" + c + ".png' class='cardImg'>");
 }
 
 function displayHighCards(a,b){
     filename = filenameFix(a);
-    $("#enemy").append("<img src='./images/" + filename + ".png'>");
+    $("#enemy").append("<img src='./images/" + filename + ".png' class='cardImg'>");
     filename = filenameFix(b);
-    $("#location").append("<img src='./images/" + filename + ".png'>");
+    $("#location").append("<img src='./images/" + filename + ".png' class='cardImg'>");
 }
 
 function reveal(){
@@ -189,6 +190,7 @@ function reveal(){
     $("#cardDescriptions").css("display","block");
 
 }
+
 function emptyContent(){
     $("#enemy").empty();
     $("#location").empty();
@@ -206,6 +208,7 @@ function resetPage(){
     $("#cardDescriptions").css("display","none");
     emptyContent();
 }
+
 function readCards(){
     hideContent();
     drawLowCards();
