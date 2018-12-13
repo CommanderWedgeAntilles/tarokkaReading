@@ -95,7 +95,6 @@ function drawLowCards(){
     //var plotPoint = $("#plotPoint").val();
     //var cardName = $("#cardName").val();
     var idArray;
-    //this may be a problem
     idArray = noSameLow();
     console.log(idArray);
 
@@ -190,6 +189,13 @@ function reveal(){
     $("#cardDescriptions").css("display","block");
 
 }
+function emptyContent(){
+    $("#enemy").empty();
+    $("#location").empty();
+    $("#tome").empty();
+    $("#sword").empty();
+    $("#symbol").empty();
+}
 
 function resetPage(){
     $("#cardButton").css("display","block");
@@ -198,8 +204,7 @@ function resetPage(){
     $("#resetButton").css("display","none");
     $("#cardDisplay").css("display","none");
     $("#cardDescriptions").css("display","none");
-    //.empty()
-
+    emptyContent();
 }
 function readCards(){
     hideContent();
