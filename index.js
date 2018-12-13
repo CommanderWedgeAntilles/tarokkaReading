@@ -13,12 +13,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json()); //support json encoded
 app.use(express.urlencoded({extended: true}));
 
-app.get("/lowCardA", drawCardController.getLowCardA);
-app.get("/lowCardB", drawCardController.getLowCardB);
-app.get("/lowCardC", drawCardController.getLowCardC);
+app.get("/getLowCardA", drawCardController.getLowCardA);
+app.get("/getLowCardB", drawCardController.getLowCardB);
+app.get("/getLowCardC", drawCardController.getLowCardC);
 
-app.get("/highCardA", drawCardController.getHighCardA);
-app.get("/highCardB", drawCardController.getHighCardB);
+app.get("/getHighCardA", drawCardController.getHighCardA);
+app.get("/getHighCardB", drawCardController.getHighCardB);
 
 
 app.get("/", function(req,res){
