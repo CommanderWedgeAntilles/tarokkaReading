@@ -43,7 +43,7 @@ function getHighPlotByID(id,callback){
     });
 }
 
-function getLowCardByID(id,plotID,callback){
+function getLowCardByID(id, callback){
     var plot = getLowPlotByID(plotID,function(results){res.json(results);});
 
     var sql ="SELECT id, cardName, cardReading FROM lowCards WHERE id=$1::number";
@@ -58,15 +58,13 @@ function getLowCardByID(id,plotID,callback){
             var results = {
                 success:true,
                 list:db_results.rows,
-                list:plot.rows
             };
             callback(null, results);
         }
     });
 }
 
-function getHighCardByID(id,plotID,callback){
-    var plot = getHighPlotByID(plotID,function(results){res.json(results);});
+function getHighCardByID(id,callback){
     
     var sql ="SELECT id, cardName FROM highCards WHERE id=$1::number";
     var params = [id];
@@ -80,13 +78,14 @@ function getHighCardByID(id,plotID,callback){
             var results = {
                 success:true,
                 list:db_results.rows,
-                list:plot.rows
             };
             callback(null, results);
         }
     });
 
 }
+
+
 
 module.exports ={
     getLowPlotByID: getLowPlotByID,
