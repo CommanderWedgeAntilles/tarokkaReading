@@ -195,6 +195,7 @@ function drawHighCard(){
     displayHighCards(idArray[0],idArray[1]);
 
 }
+//retry
 
 function hideContent(){
     $("#cardButton").css("display","none");
