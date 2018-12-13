@@ -11,7 +11,7 @@ function getLowPlotByID(id,callback){
         if(err){
             throw err;
         }else {
-            data here
+            //data here;
             console.log(db_results);
             
             var results ={
@@ -30,7 +30,7 @@ function getHighPlotByID(id,callback){
         if(err){
             throw err;
         }else {
-            data here
+            //data here
             console.log(db_results);
             
             var results ={
@@ -49,7 +49,7 @@ function getLowCardByID(id, callback){
         if(err){
             throw err;
         }else {
-            data here
+            //data here
             console.log(db_results);
             
             var results = {
@@ -68,7 +68,7 @@ function getHighCardByID(id,callback){
         if(err){
             throw err;
         }else {
-            data here
+            //data here
             console.log(db_results);
     
             var results = {
