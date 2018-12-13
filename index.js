@@ -6,7 +6,6 @@ const drawCardController = require("./controllers/drawCardController.js");
 require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
-
 var app = express();
 
 app.use(express.static(path.join(__dirname, "public")));

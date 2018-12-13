@@ -126,6 +126,7 @@ function drawLowCards(){
     });
 
     $.get("/getLowCardB",{id:idArray[1]},function(data){
+        console.log(data);
         for(var i = 0; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#2").append("<h4 class='cardName'>" + card.cardName + "</h4>");
@@ -161,6 +162,7 @@ function drawHighCard(){
     console.log(idArray);
 
     $.get("/getHighPlot", {id:1}, function(data){
+        console.log(data);
         for(var i = 0; i <= data.list.length; i++) {
             var plot = data.list[i];
             $("#4").append("<h3 class='plotPoint'>" + plot.plotPoint + "</h3>");
@@ -170,6 +172,7 @@ function drawHighCard(){
     });
 
     $.get("/getHighCardA", {id:idArray[0]}, function(data){
+        console.log(data);
         for(var i = 0; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#4").append("<h4 class='cardName'>" + card.cardName + "</h4>");
@@ -235,7 +238,6 @@ function displayHighCards(a,b){
 }
 
 function reveal(){
-    //document.getElementById("resetButton").style.display="block";
     $("#resetButton").css("display","block");
     $("#cardDisplay").css("display","block");
     $("#cardDescriptions").css("display","block");
