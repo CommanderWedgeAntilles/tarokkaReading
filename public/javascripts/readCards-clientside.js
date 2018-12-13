@@ -171,16 +171,16 @@ function hideContent(){
 
 function displayLowCards(a,b,c){
 
-    $("#tome").append("<img src='./images/" + a + ".png' class='cardImg'>");
-    $("#symbol").append("<img src='./images/" + b + ".png' class='cardImg'>");
-    $("#sword").append("<img src='./images/" + c + ".png' class='cardImg'>");
+    $("#tome").append("<img src='./images/" + a + ".png' class='cardImg' alt='" + a +"' >");
+    $("#symbol").append("<img src='./images/" + b + ".png' class='cardImg' alt='" + b +"' >");
+    $("#sword").append("<img src='./images/" + c + ".png' class='cardImg' alt='" + c +"' >");
 }
 
 function displayHighCards(a,b){
     filename = filenameFix(a);
-    $("#enemy").append("<img src='./images/" + filename + ".png' class='cardImg'>");
+    $("#enemy").append("<img src='./images/" + filename + ".png' class='cardImg' alt='" + a +"'>");
     filename = filenameFix(b);
-    $("#location").append("<img src='./images/" + filename + ".png' class='cardImg'>");
+    $("#location").append("<img src='./images/" + filename + ".png' class='cardImg' alt='" + b +"'>");
 }
 
 function reveal(){
