@@ -19,6 +19,9 @@ app.get("/getLowCardC", drawCardController.getLowCardC);
 
 app.get("/getHighCardA", drawCardController.getHighCardA);
 app.get("/getHighCardB", drawCardController.getHighCardB);
+app.get("/", function(req,res){
+
+});
 
 
 app.get("/", function(req,res){
