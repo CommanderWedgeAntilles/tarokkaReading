@@ -11,6 +11,8 @@ function getLowPlotByID(id,callback){
     var params =[id];
     pool.query(sql, params, function(err, db_results){
         if(err){
+            console.log("In error");
+            console.log(err);
             callback(err,null);
         }else {
             //data here;
