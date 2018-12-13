@@ -34,9 +34,10 @@ function getLowCardA(req,res){
 
   module.exports = {
       getLowCardA: getLowCardA,
-      getHighCardA: getHighCardA,
       getLowCardB: getLowCardB,
-      getHighCardB: getHighCardB,
-      getLowCardC: getLowCardC
+      getLowCardC: getLowCardC,
+      getHighCardA: getHighCardA,
+      getHighCardB: getHighCardB
+
 
   };
