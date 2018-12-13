@@ -8,10 +8,10 @@ function getLowPlotByID(id,callback){
     var sql ="SELECT id, plotName, plotReading FROM lowPlotPoints WHERE id='" + id + "'";
     console.log(sql);
     pool.query(sql, function(err, db_results){
-        //if(err){
-            //throw err;
-        //}else {
-            //data here
+        if(err){
+            throw err;
+        }else {
+            data here
             console.log(db_results);
             
             var results ={
@@ -19,7 +19,7 @@ function getLowPlotByID(id,callback){
                 list:db_results.rows
             };
             callback(null, results);
-        //}
+        }
     });
 
 }
@@ -27,10 +27,10 @@ function getLowPlotByID(id,callback){
 function getHighPlotByID(id,callback){
     var sql ="SELECT id, plotName, plotReading FROM highPlotPoints WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
-        // if(err){
-        //     throw err;
-        // }else {
-            //data here
+        if(err){
+            throw err;
+        }else {
+            data here
             console.log(db_results);
             
             var results ={
@@ -38,7 +38,7 @@ function getHighPlotByID(id,callback){
                 list:db_results.rows
             };
             callback(null, results);
-        //}
+        }
     });
 }
 
@@ -46,10 +46,10 @@ function getLowCardByID(id, callback){
 
     var sql ="SELECT id, cardName, cardReading FROM lowCards WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
-        // // if(err){
-        // //     throw err;
-        // }else {
-            //data here
+        if(err){
+            throw err;
+        }else {
+            data here
             console.log(db_results);
             
             var results = {
@@ -57,7 +57,7 @@ function getLowCardByID(id, callback){
                 list:db_results.rows,
             };
             callback(null, results);
-        //}
+        }
     });
 }
 
@@ -65,10 +65,10 @@ function getHighCardByID(id,callback){
     
     var sql ="SELECT id, cardName FROM highCards WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
-        // if(err){
-        //     throw err;
-        // }else {
-            //data here
+        if(err){
+            throw err;
+        }else {
+            data here
             console.log(db_results);
     
             var results = {
@@ -76,7 +76,7 @@ function getHighCardByID(id,callback){
                 list:db_results.rows,
             };
             callback(null, results);
-        //}
+        }
     });
 
 }
