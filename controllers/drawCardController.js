@@ -1,4 +1,4 @@
-const drawCardModels = require("../models/drawCardModels.js")
+const drawCardModels = require("./models/drawCardModels.js")
 
 function getLowCardA(req,res){
     //get one low card from the deck
