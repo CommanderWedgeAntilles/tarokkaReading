@@ -5,7 +5,7 @@ const pool = new Pool({connectiionString: db_url});
 
 //Still working on
 function getLowPlotByID(id,callback){
-    var sql ="SELECT id, plotName, plotReading FROM lowPlotPoints WHERE id=" + id + "";
+    var sql ="SELECT id, plotName, plotReading FROM lowPlotPoints WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
         if(err){
             throw err;
@@ -24,7 +24,7 @@ function getLowPlotByID(id,callback){
 }
 
 function getHighPlotByID(id,callback){
-    var sql ="SELECT id, plotName, plotReading FROM highPlotPoints WHERE id=" + id + "";
+    var sql ="SELECT id, plotName, plotReading FROM highPlotPoints WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
         if(err){
             throw err;
@@ -44,7 +44,7 @@ function getHighPlotByID(id,callback){
 function getLowCardByID(id, callback){
     var plot = getLowPlotByID(plotID,function(results){res.json(results);});
 
-    var sql ="SELECT id, cardName, cardReading FROM lowCards WHERE id=" + id + "";
+    var sql ="SELECT id, cardName, cardReading FROM lowCards WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
         if(err){
             throw err;
@@ -63,7 +63,7 @@ function getLowCardByID(id, callback){
 
 function getHighCardByID(id,callback){
     
-    var sql ="SELECT id, cardName FROM highCards WHERE id=" + id + "";
+    var sql ="SELECT id, cardName FROM highCards WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
         if(err){
             throw err;
