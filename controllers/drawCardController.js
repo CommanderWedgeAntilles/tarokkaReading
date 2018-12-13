@@ -34,7 +34,7 @@ function getLowCardA(req,res){
   function getLowPlot(req,res){
     //get one highcard from the deck
     var id = req.query.id;
-    drawCardModels.getLowPlotByID(id,2,function(error, results){res.json(results);});
+    drawCardModels.getLowPlotByID(id,function(error, results){res.json(results);});
   }
   function getHighPlot(req,res){
     //get one highcard from the deck
