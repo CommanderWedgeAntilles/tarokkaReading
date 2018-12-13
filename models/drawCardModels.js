@@ -6,6 +6,7 @@ const pool = new Pool({connectiionString: db_url});
 //Still working on
 function getLowPlotByID(id,callback){
     var sql ="SELECT id, plotName, plotReading FROM lowPlotPoints WHERE id='" + id + "'";
+    console.log(sql);
     pool.query(sql, function(err, db_results){
         if(err){
             throw err;

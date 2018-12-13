@@ -101,6 +101,7 @@ function drawLowCards(){
     $.get("/getLowPlot",{id:1}, function(data){
         for(var i = 0; i <= data.list.length; i++) {
             var plot = data.list[i];
+            console.log(plot);
             $("#1").append("<h3 class='plotPoint'>" + plot.plotPoint + "</h3>");
             $("#textA").append("<p class='plotReading'>" + plot.plotReading + "</p>");
         
