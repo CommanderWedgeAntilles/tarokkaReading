@@ -22,19 +22,6 @@ app.get("/getHighCardB", drawCardController.getHighCardB);
 app.get("/getLowPlot", drawCardController.getLowPlot);
 app.get("/getHighPlot", drawCardController.getHighPlot);
 
-
-app.get("/", function(req,res){
-
-});
-
 app.listen(PORT, function() {
   console.log ("Server listening on port " + PORT);
 });
-
-// var router = express.Router();
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-
-// module.exports = router;
