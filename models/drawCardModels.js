@@ -42,7 +42,6 @@ function getHighPlotByID(id,callback){
 }
 
 function getLowCardByID(id, callback){
-    var plot = getLowPlotByID(plotID,function(results){res.json(results);});
 
     var sql ="SELECT id, cardName, cardReading FROM lowCards WHERE id='" + id + "'";
     pool.query(sql, function(err, db_results){
