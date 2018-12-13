@@ -14,7 +14,10 @@ function getLowPlotByID(id,callback){
             //data here
             console.log(db_results);
             
-            var results;
+            var results ={
+                success:true,
+                list:db_results.rows
+            };
             callback(null, results);
         }
     });
@@ -31,7 +34,10 @@ function getHighPlotByID(id,callback){
             //data here
             console.log(db_results);
             
-            var results;
+            var results ={
+                success:true,
+                list:db_results.rows
+            };
             callback(null, results);
         }
     });
@@ -50,11 +56,10 @@ function getLowCardByID(id,plotID,callback){
             console.log(db_results);
             
             var results = {
-                fortune: [
-        
-                ]
+                success:true,
+                list:db_results.rows,
+                list:plot.rows
             };
-
             callback(null, results);
         }
     });
@@ -72,10 +77,10 @@ function getHighCardByID(id,plotID,callback){
             //data here
             console.log(db_results);
     
-            var results ={
-                fortune: [
-                
-                ]
+            var results = {
+                success:true,
+                list:db_results.rows,
+                list:plot.rows
             };
             callback(null, results);
         }
