@@ -42,7 +42,11 @@ function getLowCardA(req,res){
     drawCardModels.getHighPlotByID(id,function(error, results){res.json(results);});
   }
 
-
+function getPlotHighCards(req,res){
+  var plotID = req.query.plotID;
+  var cardID = req.query.plotID;
+  drawCardModels.getPlotHighCardsByIDs(plotID,cardID, function(error, results){res.json(results);});
+}
 
   module.exports = {
       getLowCardA: getLowCardA,
@@ -51,7 +55,8 @@ function getLowCardA(req,res){
       getHighCardA: getHighCardA,
       getHighCardB: getHighCardB,
       getLowPlot:getLowPlot,
-      getHighPlot:getHighPlot
+      getHighPlot:getHighPlot,
+      getPlotHighCards:getPlotHighCards
 
 
   };

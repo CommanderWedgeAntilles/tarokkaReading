@@ -21,6 +21,7 @@ app.get("/getHighCardA", drawCardController.getHighCardA);
 app.get("/getHighCardB", drawCardController.getHighCardB);
 app.get("/getLowPlot", drawCardController.getLowPlot);
 app.get("/getHighPlot", drawCardController.getHighPlot);
+app.get("/getPlotHighCards", drawCardController.getPlotHighCards);
 
 app.listen(PORT, function() {
   console.log ("Server listening on port " + PORT);
