@@ -100,7 +100,7 @@ function drawLowCards(){
 
     $.get("/getLowPlot",{id:1}, function(data){
         console.log(data);
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var plot = data.list[i];
             console.log(plot);
             $("#1").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
@@ -110,7 +110,7 @@ function drawLowCards(){
     });
 
     $.get("/getLowCardA",{id:idArray[0]}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#1").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textA").append("<p class='cardReading'>" + card.cardreading + "</p>");
@@ -118,7 +118,7 @@ function drawLowCards(){
         }
     });
     $.get("/getLowPlot",{id:2}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var plot = data.list[i];
             $("#2").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textB").append("<p class='plotReading'>" + plot.plotreading + "</p>");
@@ -128,7 +128,7 @@ function drawLowCards(){
 
     $.get("/getLowCardB",{id:idArray[1]},function(data){
         console.log(data);
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#2").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textB").append("<p class='cardReading'>" + card.cardreading + "</p>");
@@ -137,7 +137,7 @@ function drawLowCards(){
     });
 
     $.get("/getLowPlot",{id:3}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var plot = data.list[i];
             $("#3").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textC").append("<p class='plotReading'>" + plot.plotreading + "</p>");
@@ -146,7 +146,7 @@ function drawLowCards(){
     });
 
     $.get("/getLowCardC",{id:idArray[2]}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#3").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textC").append("<p class='cardReading'>" + card.cardreading + "</p>");
@@ -164,7 +164,7 @@ function drawHighCard(){
 
     $.get("/getHighPlot", {id:1}, function(data){
         console.log(data);
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var plot = data.list[i];
             $("#4").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textD").append("<p class='plotReading'>" + plot.plotreading + "</p>");
@@ -174,7 +174,7 @@ function drawHighCard(){
 
     $.get("/getHighCardA", {id:idArray[0]}, function(data){
         console.log(data);
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
             $("#4").append("<h4 class='cardName'>" + card.cardname + "</h4>");
         }
@@ -182,7 +182,7 @@ function drawHighCard(){
     }); 
 
     // $.get("/getPlotHighCards", {plotID:1, cardID:idArray[0]}, function(data){
-    //     for(var i = 0; i <= data.list.length; i++) {
+    //     for(var i = 1; i <= data.list.length; i++) {
     //         var plotCard = data.list[i];
     //         $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
     //     }
@@ -190,7 +190,7 @@ function drawHighCard(){
     // });
 
     $.get("/getHighPlot", {id:2}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var plot = data.list[i];
             $("#5").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textE").append("<p class='plotReading'>" + plot.plotreading + "</p>");
@@ -199,7 +199,7 @@ function drawHighCard(){
     });
 
     $.get("/getHighCardB", {id:idArray[1]}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
+        for(var i = 1; i <= data.list.length; i++) {
             var card = data.list[i];
 
             $("#5").append("<h4 class='cardName'>" + card.cardname + "</h4>");
@@ -207,7 +207,7 @@ function drawHighCard(){
     });
 
     // $.get("/getPlotHighCards", {plotID:2}, {cardID:idArray[1]}, function(data){
-    //     for(var i = 0; i <= data.list.length; i++) {
+    //     for(var i = 1; i <= data.list.length; i++) {
     //         var plotCard = data.list[i];
     //         $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
     //     }
