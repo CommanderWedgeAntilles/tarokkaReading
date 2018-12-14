@@ -269,3 +269,4 @@ function readCards(){
     reveal();
 }
 
+//postgres://qtenrqolfxichj:1ff352dd6be60802a7de948b5796d1b39a321e20b3888359dd4287d2fe2da262@ec2-184-72-234-230.compute-1.amazonaws.com:5432/d4ums4p6flgr2p
