@@ -181,13 +181,13 @@ function drawHighCard(){
 
     }); 
 
-    $.get("/getPlotHighCards", {plotID:1, cardID:idArray[0]}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
-            var plotCard = data.list[i];
-            $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
-        }
+    // $.get("/getPlotHighCards", {plotID:1, cardID:idArray[0]}, function(data){
+    //     for(var i = 0; i <= data.list.length; i++) {
+    //         var plotCard = data.list[i];
+    //         $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
+    //     }
         
-    });
+    // });
 
     $.get("/getHighPlot", {id:2}, function(data){
         for(var i = 0; i <= data.list.length; i++) {
@@ -206,13 +206,13 @@ function drawHighCard(){
         }
     });
 
-    $.get("/getPlotHighCards", {plotID:2}, {cardID:idArray[1]}, function(data){
-        for(var i = 0; i <= data.list.length; i++) {
-            var plotCard = data.list[i];
-            $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
-        }
+    // $.get("/getPlotHighCards", {plotID:2}, {cardID:idArray[1]}, function(data){
+    //     for(var i = 0; i <= data.list.length; i++) {
+    //         var plotCard = data.list[i];
+    //         $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
+    //     }
         
-    });
+    // });
 
     displayHighCards(idArray[0],idArray[1]);
 
