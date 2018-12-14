@@ -92,10 +92,10 @@ function getHighCardByID(id,callback){
 
 }
 
-function getPlotHighCardsByIDs(plotID,highCardID,callback){
-    var sql ="SELECT cardReading FROM plotHighCards WHERE plotID=$1 AND highCardID=$2;";
+function getPlotHighCardsByIDs(highCardID,callback){
+    var sql ="SELECT plotID, cardReading FROM plotHighCards WHERE highCardID=$1;";
     console.log(sql);
-    var params =[plotID,highCardID];
+    var params =[highCardID];
     pool.query(sql, params, function(err, db_results){
         if(err){
             callback(err,null);
