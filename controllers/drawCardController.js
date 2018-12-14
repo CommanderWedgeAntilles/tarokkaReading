@@ -43,7 +43,7 @@ function getLowCardA(req,res){
   }
 
 function getPlotHighCards(req,res){
-  var highCardID = req.query.plotID;
+  var highCardID = req.query.highCardID;
   drawCardModels.getPlotHighCardsByIDs(highCardID, function(error, results){res.json(results);});
 }
 

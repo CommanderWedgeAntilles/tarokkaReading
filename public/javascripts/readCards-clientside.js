@@ -182,6 +182,7 @@ function drawHighCard(){
     }); 
 
     $.get("/getPlotHighCards", {highCardID:idArray[0]}, function(data){
+        console.log(idArray)
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var plotCard = data.list[i];
