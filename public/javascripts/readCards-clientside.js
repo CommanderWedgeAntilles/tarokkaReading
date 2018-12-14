@@ -184,15 +184,15 @@ function drawHighCard(){
     $.get("/getPlotHighCards", {highCardID:idArray[0]}, function(data){
         console.log(idArray)
         console.log(data);
-        for(var i = 0; i < data.list.length; i++) {
-            var plotCard = data.list[i];
+        //for(var i = 0; i < data.list.length; i++) {
+            var plotCard = data.list[0];
             console.log(plotCard);
-            if(plotCard.plotID === 1){
+            if(plotCard.plotID == 1){
                 $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
             }else{
 
             }
-        }
+        //}
         
     });
 
@@ -217,15 +217,15 @@ function drawHighCard(){
 
     $.get("/getPlotHighCards", {highCardID:idArray[1]}, function(data){
         console.log(data);
-        for(var i = 0; i < data.list.length; i++) {
-            var plotCard = data.list[i];
+        //for(var i = 0; i < data.list.length; i++) {
+            var plotCard = data.list[1];
             console.log(plotCard);
-            if(plotCard.plotID === 2){
+            if(plotCard.plotID == 2){
                 $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
             }else{
 
             }
-        }
+        //}
         
     });
 
