@@ -99,6 +99,7 @@ function drawLowCards(){
     console.log(idArray);
 
     $.get("/getLowPlot",{id:1}, function(data){
+        console.log(data);
         for(var i = 0; i <= data.list.length; i++) {
             var plot = data.list[i];
             console.log(plot);
