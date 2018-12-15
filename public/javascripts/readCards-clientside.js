@@ -187,12 +187,12 @@ function drawHighCard(){
         //for(var i = 0; i < data.list.length; i++) {
             var plotCard = data.list[0];
             console.log(plotCard);
-            if(plotCard.plotID == 1){
-                $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
-            }else{
-                console.log("fail");
+            // if(plotCard.plotID == 1){
+            $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
+            // }else{
+            //     console.log("fail");
 
-            }
+            // }
         //}
         
     });
@@ -221,12 +221,12 @@ function drawHighCard(){
         //for(var i = 0; i < data.list.length; i++) {
             var plotCard = data.list[1];
             console.log(plotCard);
-            if(plotCard.plotID == 2){
-                $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
-            }else{
-                console.log("fail");
+            // if(plotCard.plotID == 2){
+            $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
+            // }else{
+            //     console.log("fail");
 
-            }
+            // }
         //}
         
     });
