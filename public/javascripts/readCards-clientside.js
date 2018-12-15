@@ -204,7 +204,6 @@ function drawHighCard(){
             console.log(plot);
             $("#5").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textE").append("<p class='plotReading'>" + plot.plotreading + "</p>");
-            $("#textE").append("<p class='cardReading'>" + plot.cardreading + "</p>");
         }
     });
 
