@@ -221,7 +221,7 @@ function drawHighCard(){
             var plotCard = data.list[1].cardreading;
             console.log(plotCard);
             // if(plotCard.plotID == 2){
-            $("#textD").append("<p class='cardReading'>" + plotCard + "</p>");
+            $("#textE").append("<p class='cardReading'>" + plotCard + "</p>");
             // }else{
             //     console.log("fail");
 
