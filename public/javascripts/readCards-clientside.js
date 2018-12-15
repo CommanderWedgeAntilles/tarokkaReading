@@ -185,10 +185,10 @@ function drawHighCard(){
         console.log(idArray);
         console.log(data);
         //for(var i = 0; i < data.list.length; i++) {
-            var plotCard = data.list[0];
+            var plotCard = data.list[0].cardreading;
             console.log(plotCard);
             // if(plotCard.plotID == 1){
-            $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
+            $("#textD").append("<p class='cardReading'>" + plotCard + "</p>");
             // }else{
             //     console.log("fail");
 
@@ -219,10 +219,10 @@ function drawHighCard(){
     $.get("/getPlotHighCards", {highCardID:idArray[1]}, function(data){
         console.log(data);
         //for(var i = 0; i < data.list.length; i++) {
-            var plotCard = data.list[1];
+            var plotCard = data.list[1].cardreading;
             console.log(plotCard);
             // if(plotCard.plotID == 2){
-            $("#textD").append("<p class='cardReading'>" + plotCard.cardreading + "</p>");
+            $("#textD").append("<p class='cardReading'>" + plotCard + "</p>");
             // }else{
             //     console.log("fail");
 
