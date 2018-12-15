@@ -267,6 +267,11 @@ function emptyContent(){
     $("#tome").empty();
     $("#sword").empty();
     $("#symbol").empty();
+    $("#textE").empty();
+    $("#textD").empty();
+    $("#textC").empty();
+    $("#textB").empty();
+    $("#textA").empty();
 }
 
 function resetPage(){
