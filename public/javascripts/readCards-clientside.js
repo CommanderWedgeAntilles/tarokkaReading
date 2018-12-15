@@ -272,11 +272,11 @@ function emptyContent(){
     $("#textC").empty();
     $("#textB").empty();
     $("#textA").empty();
-    $("#1").empty();
-    $("#2").empty();
-    $("#3").empty();
-    $("#4").empty();
-    $("#5").empty();
+    // $("#1").empty();
+    // $("#2").empty();
+    // $("#3").empty();
+    // $("#4").empty();
+    // $("#5").empty();
 }
 
 function resetPage(){
