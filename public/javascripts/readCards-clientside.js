@@ -22,16 +22,16 @@ function filenameFix(int){
             filename = "DonJon";
             break;
         case 6:
-            filename = "Executioner";
+            filename = "Seer";
             break;
         case 7:
             filename = "Ghost";
             break;
         case 8:
-            filename = "Horseman";
+            filename = "Executioner";
             break;
         case 9:
-            filename = "Mist";
+            filename = "Horseman";
             break;
         case 10:
             filename = "Innocent";
@@ -40,10 +40,10 @@ function filenameFix(int){
             filename = "Marionette";
             break;
         case 12:
-            filename = "Raven";
+            filename = "Mist";
             break;
         case 13:
-            filename = "Seer";
+            filename = "Raven";
             break;
         case 14:
             filename = "Tempter";
