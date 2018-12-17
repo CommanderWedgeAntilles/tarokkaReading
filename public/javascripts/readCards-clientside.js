@@ -31,13 +31,13 @@ function filenameFix(int){
             filename = "Horseman";
             break;
         case 9:
-            filename = "Innocent";
+            filename = "Mist";
             break;
         case 10:
-            filename = "Marionette";
+            filename = "Innocent";
             break;
         case 11:
-            filename = "Mist";
+            filename = "Marionette";
             break;
         case 12:
             filename = "Raven";
