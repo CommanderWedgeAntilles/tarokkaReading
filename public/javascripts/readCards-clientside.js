@@ -245,22 +245,30 @@ function hideContent(){
 
 function displayLowCards(a,b,c){
 
-    $("#tome").append("<img src='./images/" + a + ".png' class='cardImg' alt='" + a +"' >");
-    $("#symbol").append("<img src='./images/" + b + ".png' class='cardImg' alt='" + b +"' >");
-    $("#sword").append("<img src='./images/" + c + ".png' class='cardImg' alt='" + c +"' >");
+    $("#tome").append("<img src='./images/" + a + ".png' class='cardImg' alt='" + a +"' style='max-width: 100%; max-height: 100%;'>");
+    $("#symbol").append("<img src='./images/" + b + ".png' class='cardImg' alt='" + b +"' style='max-width: 100%; max-height: 100%;'>");
+    $("#sword").append("<img src='./images/" + c + ".png' class='cardImg' alt='" + c +"' style='max-width: 100%; max-height: 100%;'>");
 }
 
 function displayHighCards(a,b){
     filename = filenameFix(a);
-    $("#enemy").append("<img src='./images/" + filename + ".png' class='cardImg' alt='" + a +"'>");
+    $("#enemy").append("<img src='./images/" + filename + ".png' class='cardImg' alt='" + a +"' style='max-width: 100%; max-height: 100%;'>");
     filename = filenameFix(b);
-    $("#location").append("<img src='./images/" + filename + ".png' class='cardImg' alt='" + b +"'>");
+    $("#location").append("<img src='./images/" + filename + ".png' class='cardImg' alt='" + b +"' style='max-width: 100%; max-height: 100%;'>");
 }
 
 function reveal(){
     $("#resetButton").css("display","block");
     $("#cardDescriptions").css("display","block");
     $("#cardDescriptions").css("float","left");
+    for(i = 1; i < 6; i++){
+        $("#"+ i).css("float","left");
+        $("#"+ i).css("width","30%");
+        $("#"+ i).css("padding","10px");
+        $("#"+ i).css("text-align","center");
+    }
+    
+    
 
 }
 
