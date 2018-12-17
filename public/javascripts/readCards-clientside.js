@@ -103,7 +103,7 @@ function drawLowCards(){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
             console.log(plot);
-            $("#headA").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#plotA").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textA").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         
         }
@@ -112,7 +112,7 @@ function drawLowCards(){
     $.get("/getLowCardA",{id:idArray[0]}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#headA").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#cardA").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textA").append("<p class='cardReading'>" + card.cardreading + "</p>");
 
         }
@@ -120,7 +120,7 @@ function drawLowCards(){
     $.get("/getLowPlot",{id:2}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
-            $("#headB").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#plotB").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textB").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         
         }
@@ -130,7 +130,7 @@ function drawLowCards(){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#headB").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#cardB").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textB").append("<p class='cardReading'>" + card.cardreading + "</p>");
 
         }
@@ -139,7 +139,7 @@ function drawLowCards(){
     $.get("/getLowPlot",{id:3}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
-            $("#headC").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#plotC").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textC").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         
         }
@@ -148,7 +148,7 @@ function drawLowCards(){
     $.get("/getLowCardC",{id:idArray[2]}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#headC").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#cardC").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textC").append("<p class='cardReading'>" + card.cardreading + "</p>");
 
         }
@@ -166,7 +166,7 @@ function drawHighCard(){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#headD").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#cardD").append("<h4 class='cardName'>" + card.cardname + "</h4>");
         }
 
     }); 
@@ -175,7 +175,7 @@ function drawHighCard(){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
-            $("#headD").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#plotD").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textD").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         }
         
@@ -202,7 +202,7 @@ function drawHighCard(){
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
 
-            $("#headE").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#cardE").append("<h4 class='cardName'>" + card.cardname + "</h4>");
         }
     });
 
@@ -211,7 +211,7 @@ function drawHighCard(){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
             console.log(plot);
-            $("#headE").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#plotE").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textE").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         }
     });
@@ -272,11 +272,11 @@ function emptyContent(){
     $("#4").empty();
     $("#5").empty();
     //fill
-    $("#1").append("<div class='image' id='tome'></div><div class='title' id='headA'></div><div id='textA'></div>");
-    $("#2").append("<div class='image' id='symbol'></div><div class='title' id='headB'></div><div id='textB'></div>");
-    $("#3").append("<div class='image' id='sword'></div><div class='title' id='headC'></div><div id='textC'></div>");
-    $("#4").append("<div class='image' id='enemy'></div><div class='title' id='headD'></div><div id='textD'></div>");
-    $("#5").append("<div class='image' id='location'></div><div class='title' id='headE'></div><div id='textE'></div>");
+    $("#1").append("<div class='image' id='tome'></div><div class='title' id='headA'><div id='plotA'></div><div id='cardA'></div></div><div id='textA'></div>");
+    $("#2").append("<div class='image' id='symbol'></div><div class='title' id='headB'><div id='plotB'></div><div id='cardB'></div></div><div id='textB'></div>");
+    $("#3").append("<div class='image' id='sword'></div><div class='title' id='headC'><div id='plotC'></div><div id='cardC'></div></div><div id='textC'></div>");
+    $("#4").append("<div class='image' id='enemy'></div><div class='title' id='headD'><div id='plotD'></div><div id='cardD'></div></div><div id='textD'></div>");
+    $("#5").append("<div class='image' id='location'></div><div class='title' id='headE'><div id='plotE'></div><div id='cardE'></div></div><div id='textE'></div>");
 }
 
 function resetPage(){
