@@ -260,7 +260,6 @@ function displayHighCards(a,b){
 function reveal(){
     $("#resetButton").css("display","block");
     $("#cardDescriptions").css("display","block");
-    $("#resetButton").css("float","left");
     $("#cardDescriptions").css("float","left");
 
 }
