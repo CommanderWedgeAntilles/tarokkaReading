@@ -259,7 +259,6 @@ function displayHighCards(a,b){
 
 function reveal(){
     $("#resetButton").css("display","block");
-    $("#cardDisplay").css("display","block");
     $("#cardDescriptions").css("display","block");
 
 }
@@ -285,7 +284,6 @@ function resetPage(){
     $("#introImage").css("display","block");
     
     $("#resetButton").css("display","none");
-    $("#cardDisplay").css("display","none");
     $("#cardDescriptions").css("display","none");
     emptyContent();
 }
