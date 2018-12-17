@@ -7,10 +7,6 @@ body {
 #resetButton, #cardDescriptions {
   display: none;
 }
-div#1 img, div#2 img, div#3 img, div#4 img, div#5 img{
-  max-width: 100%; 
-  max-height: 100%;
-}
 
 div#1, div#2, div#3, div#4, div#5{
   float:left;
@@ -20,6 +16,13 @@ div#1, div#2, div#3, div#4, div#5{
   max-height: 100%;
   text-align: center;
 }
+
+div#1 img, div#2 img, div#3 img, div#4 img, div#5 img{
+  max-width: 100%; 
+  max-height: 100%;
+}
+
+
 
 #introImage{
   width:100%;
