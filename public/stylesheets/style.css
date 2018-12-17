@@ -14,6 +14,20 @@ div#1, div#2, div#3, div#4, div#5{
   max-height: 100%;
 }
 
+div#1 img, div#2 img, div#3 img, div#4 img, div#5 img{
+  height: auto; 
+  width: auto; 
+  max-width: 20%; 
+  max-height: 100%;
+}
+
+div#1, div#2, div#3, div#4, div#5{
+  height: auto; 
+  width: auto; 
+  max-width: 20%; 
+  max-height: 100%;
+}
+
 #introImage{
   width:100%;
   padding:16pt;
