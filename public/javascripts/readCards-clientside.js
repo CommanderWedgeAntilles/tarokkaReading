@@ -162,6 +162,15 @@ function drawHighCard(){
     idArray = noSameHigh();
     console.log(idArray);
 
+    $.get("/getHighCardA",{id:idArray[0]}, function(data){
+        console.log(data);
+        for(var i = 0; i < data.list.length; i++) {
+            var card = data.list[i];
+            $("#headD").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+        }
+
+    }); 
+
     $.get("/getHighPlot", {id:1}, function(data){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
@@ -172,14 +181,6 @@ function drawHighCard(){
         
     });
 
-    $.get("/getHighCardA",{id:idArray[0]}, function(data){
-        console.log(data);
-        for(var i = 0; i < data.list.length; i++) {
-            var card = data.list[i];
-            $("#headD").append("<h4 class='cardName'>" + card.cardname + "</h4>");
-        }
-
-    }); 
 
     $.get("/getPlotHighCards", {highCardID:idArray[0]}, function(data){
         console.log(idArray);
@@ -197,6 +198,14 @@ function drawHighCard(){
         
     });
 
+    $.get("/getHighCardB", {id:idArray[1]}, function(data){
+        for(var i = 0; i < data.list.length; i++) {
+            var card = data.list[i];
+
+            $("#headE").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+        }
+    });
+
     $.get("/getHighPlot", {id:2}, function(data){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
@@ -207,13 +216,7 @@ function drawHighCard(){
         }
     });
 
-    $.get("/getHighCardB", {id:idArray[1]}, function(data){
-        for(var i = 0; i < data.list.length; i++) {
-            var card = data.list[i];
 
-            $("#headE").append("<h4 class='cardName'>" + card.cardname + "</h4>");
-        }
-    });
 
     $.get("/getPlotHighCards", {highCardID:idArray[1]}, function(data){
         console.log(data);
