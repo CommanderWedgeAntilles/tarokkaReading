@@ -103,7 +103,7 @@ function drawLowCards(){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
             console.log(plot);
-            $("#1").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#headA").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textA").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         
         }
@@ -112,7 +112,7 @@ function drawLowCards(){
     $.get("/getLowCardA",{id:idArray[0]}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#1").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#headA").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textA").append("<p class='cardReading'>" + card.cardreading + "</p>");
 
         }
@@ -120,7 +120,7 @@ function drawLowCards(){
     $.get("/getLowPlot",{id:2}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
-            $("#2").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#headB").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textB").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         
         }
@@ -130,7 +130,7 @@ function drawLowCards(){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#2").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#headB").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textB").append("<p class='cardReading'>" + card.cardreading + "</p>");
 
         }
@@ -139,7 +139,7 @@ function drawLowCards(){
     $.get("/getLowPlot",{id:3}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
-            $("#3").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#headC").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textC").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         
         }
@@ -148,7 +148,7 @@ function drawLowCards(){
     $.get("/getLowCardC",{id:idArray[2]}, function(data){
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#3").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#headC").append("<h4 class='cardName'>" + card.cardname + "</h4>");
             $("#textC").append("<p class='cardReading'>" + card.cardreading + "</p>");
 
         }
@@ -166,7 +166,7 @@ function drawHighCard(){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
-            $("#4").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#headD").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textD").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         }
         
@@ -176,7 +176,7 @@ function drawHighCard(){
         console.log(data);
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
-            $("#4").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#headD").append("<h4 class='cardName'>" + card.cardname + "</h4>");
         }
 
     }); 
@@ -202,7 +202,7 @@ function drawHighCard(){
         for(var i = 0; i < data.list.length; i++) {
             var plot = data.list[i];
             console.log(plot);
-            $("#5").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
+            $("#headE").append("<h3 class='plotPoint'>" + plot.plotname + "</h3>");
             $("#textE").append("<p class='plotReading'>" + plot.plotreading + "</p>");
         }
     });
@@ -211,7 +211,7 @@ function drawHighCard(){
         for(var i = 0; i < data.list.length; i++) {
             var card = data.list[i];
 
-            $("#5").append("<h4 class='cardName'>" + card.cardname + "</h4>");
+            $("#headE").append("<h4 class='cardName'>" + card.cardname + "</h4>");
         }
     });
 
