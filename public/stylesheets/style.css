@@ -17,8 +17,8 @@ div#1, div#2, div#3, div#4, div#5{
 div#1 img, div#2 img, div#3 img, div#4 img, div#5 img{
   height: auto; 
   width: auto; 
-  max-width: 20%; 
-  max-height: 100%;
+  max-width: 600px; 
+  max-height: 840px;
 }
 
 div#1, div#2, div#3, div#4, div#5{
