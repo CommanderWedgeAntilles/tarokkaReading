@@ -265,21 +265,19 @@ function reveal(){
 }
 
 function emptyContent(){
-    $("#enemy").empty();
-    $("#location").empty();
-    $("#tome").empty();
-    $("#sword").empty();
-    $("#symbol").empty();
-    $("#textE").empty();
-    $("#textD").empty();
-    $("#textC").empty();
-    $("#textB").empty();
-    $("#textA").empty();
-    // $("#1").empty();
-    // $("#2").empty();
-    // $("#3").empty();
-    // $("#4").empty();
-    // $("#5").empty();
+
+    //empty
+    $("#1").empty();
+    $("#2").empty();
+    $("#3").empty();
+    $("#4").empty();
+    $("#5").empty();
+    //fill
+    $("#1").append("<div class='image' id='tome'></div><div class='title' id='headA'></div><div id='textA'></div>");
+    $("#2").append("<div class='image' id='symbol'></div><div class='title' id='headB'></div><div id='textB'></div>");
+    $("#3").append("<div class='image' id='sword'></div><div class='title' id='headC'></div><div id='textC'></div>");
+    $("#4").append("<div class='image' id='enemy'></div><div class='title' id='headD'></div><div id='textD'></div>");
+    $("#5").append("<div class='image' id='location'></div><div class='title' id='headE'></div><div id='textE'></div>");
 }
 
 function resetPage(){
